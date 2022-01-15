@@ -1,10 +1,10 @@
 name: 260 Workflow
 
 on:
-  # Triggers when something in the www (changed to portfolio for lols) path on the main branch of your repo changes
+  # Triggers when something in the www path on the main branch of your repo changes
   push:
     branches: [ main ]
-    paths: [ 'portfolio/**' ]
+    paths: [ 'www/**' ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       # Use this marketplace step to copy files over SCP. 
-      # This copies everything in the /source/repos/portfolio dir of your repo to your /var/www/html directory        
+      # This copies everything in the /source/repos/portfolio dir of your repo to your /var/www/html/portfolio directory        
       - name: Copy website files
         uses: garygrossgarten/github-action-scp@release
         with:
