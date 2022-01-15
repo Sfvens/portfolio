@@ -1,10 +1,10 @@
 name: 260 Workflow
 
 on:
-  # Triggers when something in the www path on the main branch of your repo changes
+  # Triggers when something in the www (changed to portfolio for lols) path on the main branch of your repo changes
   push:
     branches: [ main ]
-    paths: [ 'www/**' ]
+    paths: [ 'portfolio/**' ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
